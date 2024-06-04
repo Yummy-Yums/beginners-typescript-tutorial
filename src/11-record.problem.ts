@@ -1,7 +1,11 @@
 import { expect, it } from "vitest";
 
+type returnType =  {
+  [id: string]: string;
+}
+
 const createCache = () => {
-  const cache = {};
+  const cache: returnType = {};
 
   const add = (id: string, value: string) => {
     cache[id] = value;
